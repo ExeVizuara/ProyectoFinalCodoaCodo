@@ -204,6 +204,10 @@ form .container #btnEnviar:hover {
 }
 
 /* Orden de items en nav - footer */
+section ul {
+    display: flex;
+    justify-content: space-around;
+}
 body ul {
     display: flex;
     justify-content: space-around;
