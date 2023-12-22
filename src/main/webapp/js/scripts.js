@@ -11,12 +11,14 @@ const categoria = document.getElementById('categoria');
 const totalPagar = document.getElementById('totalAPagar');
 const btnResumen = document.getElementById('resumen');
 const btnBorrar = document.getElementById('borrar');
+const btnComprar = document.getElementById("comprar");
 const estudiante = document.getElementById('estudiante');
 const trainee = document.getElementById('trainee');
 const junior = document.getElementById('junior');
+const ninguno = document.getElementById('ninguno');
 
 
-function borrarCampos(){
+function borrarCampos() {
     document.getElementById("nombre").value = "";
     document.getElementById("apellido").value = "";
     document.getElementById("email").value = "";
@@ -50,10 +52,15 @@ function calcularPago() {
 btnResumen.addEventListener('click', (e) => {
     e.preventDefault();
     calcularPago();
+    btnComprar.style.display = "block";
 });
 btnBorrar.addEventListener('click', (e) => {
     e.preventDefault();
     borrarCampos();
+});
+btnComprar.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.href = "vistas/facturacionTicket.jsp";
 });
 estudiante.addEventListener('click', (e) => {
     e.preventDefault();

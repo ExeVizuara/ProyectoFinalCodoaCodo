@@ -13,6 +13,7 @@ import java.sql.Date;
 
 @WebServlet("/registroOrador")
 public class RegistroOrador extends HttpServlet {
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // Obtener datos del formulario
